@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/* font-family: 'Kumbh Sans', sans-serif; */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
+
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+
+    --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 12px;
+    background-color: var(--Soft-blue);
+    height: 100vh;
+}
+
+.container{
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    max-width: 800px;
+    height: 500px;
+    border-radius: 15px;
+}
+
+.img-wrapper{
+    
+    background-image: url('/images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 450px;
+    max-width: 400px;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.img-wrapper img{
+    margin-left: -100px;
+    margin-top: 20px;
+    max-width: fit-content;
+    z-index: -2;
+}
+
+.img-wrapper .box-image{
+    position: absolute;
+    margin-top: 160px;
+    margin-left: -100px;
+    z-index: 2;
+}
+
+/* faq container */
+.faq-container{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+h1{
+    margin-top: -50px;
+    font-size: 36px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.faq{
+    padding: 15px;
+    border-bottom: 1px solid #000;
+}
+
+.faq p{
+    margin-top: 7px;
+    display: none;
+}
+
+.faq-header{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-content: space-between;
+}
+
+.faq-header h5{
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.faq-header button{
+    cursor: pointer;
+    margin-right: 40px;
+    background-color: #fff;
+    border: none;
+}
+
+.faq-header i{
+    color: var(--Soft-red);
+    display: none;
+}
+
+.faq.active p{
+    display: block;
+}
+
+.faq.active .arrow-down{
+    display: none;
+}
+
+.faq.active h5{
+    opacity: 1;
+}
+
+.faq.active .fa-solid{
+    display: block;
+}
+
